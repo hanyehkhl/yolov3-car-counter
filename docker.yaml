@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  yolov3-car-counter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: yolov3-car-counter:latest
+    container_name: yolov3-car-counter
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./src:/app/src
+      - ./config.py:/app/config.py
+    # Override default command to process a specific video
+    # command: ["python", "src/main.py", "--input", "data/input/traffic.mp4"]
+    environment:
+      - PYTHONUNBUFFERED=1

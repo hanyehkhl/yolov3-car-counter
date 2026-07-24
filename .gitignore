@@ -1,0 +1,11 @@
+# پوشه‌های تولیدشده
+venv/
+__pycache__/
+*.pyc
+*.pyo
+data/input/
+data/output/
+.env
+
+# وزن‌های مدل - حجم بالا، باید جداگانه دانلود شود
+models/yolov3.weights
